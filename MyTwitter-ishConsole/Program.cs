@@ -10,25 +10,42 @@ namespace MyTwitter_ishConsole
     {
         static void Main(string[] args)
         {
-            string[] tweets = new string[4];
-
-            for (int i = 0; i < tweets.Length; i++)
+            string choice;
+            do
             {
-                Console.Write("Enter Tweet #{0}: ", i + 1);
-                tweets[i] = Console.ReadLine();
+                Console.WriteLine("------Main Menu------");
+                Console.WriteLine();
+                Console.WriteLine("1: View All Tweets");
+                Console.WriteLine("2: Post New Tweet");
+                Console.WriteLine("3: Exit");
+
+                choice = Console.ReadLine();
+
+                Console.WriteLine("You entered {0}", choice);
+
+                Console.ReadLine();
             }
+            while (choice != "3");
+            
+            //string[] tweets = new string[4];
 
-            Console.WriteLine("Your Tweets Posted Successfully.");
-            Console.WriteLine();
+            //for (int i = 0; i < tweets.Length; i++)
+            //{
+            //    Console.Write("Enter Tweet #{0}: ", i + 1);
+            //    tweets[i] = Console.ReadLine();
+            //}
 
-            Console.WriteLine("Your tweets are: ");
+            //Console.WriteLine("Your Tweets Posted Successfully.");
+            //Console.WriteLine();
 
-            for (int i = 0; i < tweets.Length; i++)
-            {
-                Console.WriteLine("Your tweet #{0} is '{1}' ", i + 1, tweets[i]);
-            }
+            //Console.WriteLine("Your tweets are: ");
 
-            Console.ReadLine();
+            //for (int i = 0; i < tweets.Length; i++)
+            //{
+            //    Console.WriteLine("Your tweet #{0} is '{1}' ", i + 1, tweets[i]);
+            //}
+
+            //Console.ReadLine();
 
         }
     }
