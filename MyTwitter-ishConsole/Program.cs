@@ -12,26 +12,21 @@ namespace MyTwitter_ishConsole
         {
             string[] tweets = new string[4];
 
-            Console.Write("Enter Your Tweet: ");
-            tweets[0] = Console.ReadLine();
-
-            Console.Write("Enter Second Tweet: ");
-            tweets[1] = Console.ReadLine();
-
-            Console.Write("Enter Third Tweet: ");
-            tweets[2] = Console.ReadLine();
-
-            Console.Write("Enter Fourth Tweet: ");
-            tweets[3] = Console.ReadLine();
+            for (int i = 0; i < tweets.Length; i++)
+            {
+                Console.Write("Enter Tweet #{0}: ", i + 1);
+                tweets[i] = Console.ReadLine();
+            }
 
             Console.WriteLine("Your Tweets Posted Successfully.");
             Console.WriteLine();
 
-            Console.WriteLine("Your Tweets Are: ");
-            Console.WriteLine(tweets[0]);
-            Console.WriteLine(tweets[1]);
-            Console.WriteLine(tweets[2]);
-            Console.WriteLine(tweets[3]);
+            Console.WriteLine("Your tweets are: ");
+
+            for (int i = 0; i < tweets.Length; i++)
+            {
+                Console.WriteLine("Your tweet #{0} is '{1}' ", i + 1, tweets[i]);
+            }
 
             Console.ReadLine();
 
