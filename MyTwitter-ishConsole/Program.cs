@@ -10,10 +10,9 @@ namespace MyTwitter_ishConsole
     {
         static void Main(string[] args)
         {
-            string choice;
-            string[] tweets = new string[10];
+            TweetsManager tm = new TweetsManager();
 
-            int tweetCount = 0;
+            string choice;  
 
             do
             {
@@ -28,23 +27,17 @@ namespace MyTwitter_ishConsole
 
                 if(choice == "1")
                 {
-                    for (int i = 0; i < tweetCount; i++)
-                        Console.WriteLine("Tweet #{0}: {1}", i + 1, tweets[i]);
+                    for (int i = 0; i < tm.TweetCount(); i++)
+                        Console.WriteLine("Tweet #{0}: {1}", i + 1, tm.GetTweets()[i]);
                     Console.WriteLine();
                 }
                 if(choice == "2")
                 {
                     Console.Write("Enter your tweet: ");
                     string tweet = Console.ReadLine();
-                    Console.WriteLine();
 
-                    if(tweet.Length > 280)
-                    {
-                        Console.WriteLine("Your tweet is over 280 characters and will not be saved.");
-                        continue;
-                    }
-
-                    tweets[tweetCount++] = tweet;
+                    string msg = tm.PostTweet(tweet);
+                    Console.WriteLine(msg);
                 }
 
                
