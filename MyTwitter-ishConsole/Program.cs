@@ -31,6 +31,7 @@ namespace MyTwitter_ishConsole
                         Console.WriteLine("Tweet #{0}: {1}", i + 1, tm.GetTweets()[i]);
                     Console.WriteLine();
                 }
+
                 if(choice == "2")
                 {
                     Console.Write("Enter your tweet: ");
@@ -39,32 +40,11 @@ namespace MyTwitter_ishConsole
                     string msg = tm.PostTweet(tweet);
                     Console.WriteLine(msg);
                 }
-
-               
+     
             }
             while (choice != "3");
 
             Console.ReadLine();
-
-            //string[] tweets = new string[4];
-
-            //for (int i = 0; i < tweets.Length; i++)
-            //{
-            //    Console.Write("Enter Tweet #{0}: ", i + 1);
-            //    tweets[i] = Console.ReadLine();
-            //}
-
-            //Console.WriteLine("Your Tweets Posted Successfully.");
-            //Console.WriteLine();
-
-            //Console.WriteLine("Your tweets are: ");
-
-            //for (int i = 0; i < tweets.Length; i++)
-            //{
-            //    Console.WriteLine("Your tweet #{0} is '{1}' ", i + 1, tweets[i]);
-            //}
-
-            //Console.ReadLine();
 
         }
     }
