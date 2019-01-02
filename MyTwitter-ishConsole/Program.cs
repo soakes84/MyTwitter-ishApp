@@ -10,7 +10,7 @@ namespace MyTwitter_ishConsole
     {
         static void Main(string[] args)
         {
-            TweetsManager tm = new TweetsManager();
+            TweetsManagerFile tm = new TweetsManagerFile();
 
             string choice;  
 

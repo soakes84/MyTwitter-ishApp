@@ -6,33 +6,32 @@ using System.Threading.Tasks;
 
 namespace MyTwitter_ishConsole
 {
-    class TweetsManager
+    class TweetsManagerFile
     {
-        string[] tweets = new string[10];
-
-        int tweetCount = 0;
+        private string fileName = "tweets.txt";
 
         public string PostTweet(string tweet)
         {
             if (tweet.Length > 280)
                 return "Tweets have to be 280 characters or less.";
 
-            if (tweetCount > tweets.Length)
+            if (TweetCount() > GetTweets().Length)
                 return "You are only allowed 10 tweets. Sorry.";
 
-            tweets[tweetCount++] = tweet;
+            System.IO.File.AppendAllLines(fileName, new string[] { tweet });
 
             return "Your tweet has been posted.";
         }
 
         public string[] GetTweets()
         {
-            return tweets;
+            return new string[5];
         }
 
         public int TweetCount()
         {
-            return tweetCount;
+            return 0;   
         }
     }
+}
 }
