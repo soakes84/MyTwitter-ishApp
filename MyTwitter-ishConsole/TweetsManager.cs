@@ -25,5 +25,16 @@ namespace MyTwitter_ishConsole
         public abstract string[] GetTweets();
         public abstract int TweetCount();
         public abstract string WriteTweet(string tweet);
+
+        public List<string> Search(string searchWord)
+        {
+            List<string> results = new List<string>();
+
+            for (int i = 0; i < TweetCount(); i++)
+                if (GetTweets()[i].Contains(searchWord))
+                    results.Add(GetTweets()[i]);
+
+            return results;
+        }
     }
 }
