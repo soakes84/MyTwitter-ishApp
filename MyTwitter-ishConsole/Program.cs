@@ -20,7 +20,8 @@ namespace MyTwitter_ishConsole
                 Console.WriteLine();
                 Console.WriteLine("1: Post New Tweet");
                 Console.WriteLine("2: View All Tweets");
-                Console.WriteLine("3: Exit");
+                Console.WriteLine("3: Search Tweets");
+                Console.WriteLine("4: Exit");
 
                 choice = Console.ReadLine();
                 Console.WriteLine();
@@ -42,8 +43,16 @@ namespace MyTwitter_ishConsole
                     Console.WriteLine();
                 }
 
+                if (choice == "3")
+                {
+                    Console.Write("Enter word to search for: ");
+                    string search = Console.ReadLine();
+                    List<string> results = tm.Search(search);
+                    Console.WriteLine("Found " + results.Count + " tweets.");
+                }
+
             }
-            while (choice != "3");
+            while (choice != "4");
 
             Console.ReadLine();
 
