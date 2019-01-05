@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyTwitter_ishConsole
+namespace TweetManager
 {
-    class TweetsManagerFile : TweetsManager
+    public class TweetsManagerFile : TweetsManager
     {
         private string fileName = "tweets.txt";
 

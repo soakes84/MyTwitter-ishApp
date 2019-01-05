@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyTwitter_ishConsole
+namespace TweetManager
 {
-    class TweetsManagerMemory : TweetsManager
+    public class TweetsManagerMemory : TweetsManager
     {
         string[] tweets = new string[10];
 

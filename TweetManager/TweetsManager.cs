@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyTwitter_ishConsole
+namespace TweetManager
 {
     public abstract class TweetsManager
     {
