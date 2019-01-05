@@ -10,7 +10,11 @@ namespace MyTwitter_ishConsole
     {
         static void Main(string[] args)
         {
-            TweetsManagerFile tm = new TweetsManagerFile();
+
+
+            TweetsManagerFile tmf = new TweetsManagerFile();        // use this to save tweets to your disk
+
+            TweetsManagerMemory tmm = new TweetsManagerMemory();    // use this for in memory/get erased every use
 
             string choice;
 
@@ -31,14 +35,14 @@ namespace MyTwitter_ishConsole
                     Console.Write("Enter your tweet: ");
                     string tweet = Console.ReadLine();
 
-                    string msg = tm.WriteTweet(tweet);
+                    string msg = tmf.WriteTweet(tweet);
                     Console.WriteLine(msg);
                 }
 
                 if (choice == "2")
                 {
-                    for (int i = 0; i < tm.TweetCount(); i++)
-                        Console.WriteLine("Tweet #{0}: {1}", i + 1, tm.GetTweets()[i]);
+                    for (int i = 0; i < tmf.TweetCount(); i++)
+                        Console.WriteLine("Tweet #{0}: {1}", i + 1, tmf.GetTweets()[i]);
 
                     Console.WriteLine();
                 }
@@ -47,7 +51,7 @@ namespace MyTwitter_ishConsole
                 {
                     Console.Write("Enter word to search for: ");
                     string search = Console.ReadLine();
-                    List<string> results = tm.Search(search);
+                    List<string> results = tmf.Search(search);
                     Console.WriteLine("Found " + results.Count + " tweets.");
                 }
 
