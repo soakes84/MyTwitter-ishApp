@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTwitter-ishConsole", "MyT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetManager", "TweetManager\TweetManager.csproj", "{79DF791B-1E4A-4923-8A76-B0D0E37EF322}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Twitter-ish-Form", "Twitter-ish-Form\Twitter-ish-Form.csproj", "{3C1E8CFB-BC7E-4521-947F-6E644711A302}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{79DF791B-1E4A-4923-8A76-B0D0E37EF322}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79DF791B-1E4A-4923-8A76-B0D0E37EF322}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79DF791B-1E4A-4923-8A76-B0D0E37EF322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1E8CFB-BC7E-4521-947F-6E644711A302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1E8CFB-BC7E-4521-947F-6E644711A302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1E8CFB-BC7E-4521-947F-6E644711A302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1E8CFB-BC7E-4521-947F-6E644711A302}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
