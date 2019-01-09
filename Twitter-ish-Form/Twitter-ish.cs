@@ -13,7 +13,9 @@ namespace Twitter_ish_Form
 {
     public partial class Twitter_ish : Form
     {
-        TweetsManagerMemory tmm = new TweetsManagerMemory();
+        TweetsManagerMemory tmm = new TweetsManagerMemory(); // if you want to run in memory
+
+        TweetsManagerFile tmf = new TweetsManagerFile();    // if you want saved to your disk
 
         public Twitter_ish()
         {
@@ -27,12 +29,13 @@ namespace Twitter_ish_Form
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            refreshTweets();
 
         }
 
         private void btnPost_Click(object sender, EventArgs e)
         {
-            string msg = tmm.PostTweets(txtTweet.Text);
+            string msg = tmf.PostTweets(txtTweet.Text);
             lblStatus.Text = msg;
             refreshTweets();    
         }
@@ -40,8 +43,8 @@ namespace Twitter_ish_Form
         void refreshTweets()
         {
             listTweets.Items.Clear();
-            string[] tweets = tmm.GetTweets();
-            int tweetsCount = tmm.TweetCount();
+            string[] tweets = tmf.GetTweets();
+            int tweetsCount = tmf.TweetCount();
 
             for (int i = 0; i < tweetsCount; i++)
                 listTweets.Items.Add(tweets[i]);

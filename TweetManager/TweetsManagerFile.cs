@@ -25,16 +25,19 @@ namespace TweetManager
 
         public override string[] GetTweets()
         {
-            if (System.IO.File.ReadAllLines(fileName).Length > 0)
+            if (System.IO.File.Exists(fileName))
                 return System.IO.File.ReadAllLines(fileName);
 
             else
-                return new string[] { "There are no tweets" };
+                return new string[0];
         }
 
         public override int TweetCount()
         {
+            if (System.IO.File.Exists(fileName))
                 return System.IO.File.ReadAllLines(fileName).Length;
+            else
+                return 0;
         }
     }
 }

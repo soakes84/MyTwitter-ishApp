@@ -64,7 +64,7 @@
             // 
             // btnPost
             // 
-            this.btnPost.Location = new System.Drawing.Point(267, 311);
+            this.btnPost.Location = new System.Drawing.Point(290, 309);
             this.btnPost.Name = "btnPost";
             this.btnPost.Size = new System.Drawing.Size(75, 23);
             this.btnPost.TabIndex = 2;
@@ -85,7 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 367);
+            this.ClientSize = new System.Drawing.Size(389, 367);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnPost);
             this.Controls.Add(this.txtTweet);
