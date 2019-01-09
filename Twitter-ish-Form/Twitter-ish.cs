@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TweetManager;
 
 namespace Twitter_ish_Form
 {
-    public partial class Form1 : Form
+    public partial class Twitter_ish : Form
     {
-        public Form1()
+        TweetsManagerMemory tmm = new TweetsManagerMemory();
+
+        public Twitter_ish()
         {
             InitializeComponent();
         }
@@ -20,6 +23,17 @@ namespace Twitter_ish_Form
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPost_Click(object sender, EventArgs e)
+        {
+            string msg = tmm.PostTweets(txtTweet.Text);
+            lblStatus.Text = msg;
         }
     }
 }

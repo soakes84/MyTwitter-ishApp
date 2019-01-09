@@ -1,6 +1,6 @@
 ﻿namespace Twitter_ish_Form
 {
-    partial class Form1
+    partial class Twitter_ish
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,7 @@
             this.listTweets = new System.Windows.Forms.ListBox();
             this.txtTweet = new System.Windows.Forms.TextBox();
             this.btnPost = new System.Windows.Forms.Button();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.Tweets.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,17 +70,29 @@
             this.btnPost.TabIndex = 2;
             this.btnPost.Text = "Post";
             this.btnPost.UseVisualStyleBackColor = true;
+            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
-            // Form1
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(12, 342);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(16, 13);
+            this.lblStatus.TabIndex = 3;
+            this.lblStatus.Text = "...";
+            // 
+            // Twitter_ish
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 367);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnPost);
             this.Controls.Add(this.txtTweet);
             this.Controls.Add(this.Tweets);
-            this.Name = "Form1";
+            this.Name = "Twitter_ish";
             this.Text = "Twitter-ish";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Tweets.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -92,6 +105,7 @@
         private System.Windows.Forms.ListBox listTweets;
         private System.Windows.Forms.TextBox txtTweet;
         private System.Windows.Forms.Button btnPost;
+        private System.Windows.Forms.Label lblStatus;
     }
 }
 
