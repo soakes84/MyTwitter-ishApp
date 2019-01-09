@@ -28,47 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.groupBox1.SuspendLayout();
+            this.Tweets = new System.Windows.Forms.GroupBox();
+            this.listTweets = new System.Windows.Forms.ListBox();
+            this.txtTweet = new System.Windows.Forms.TextBox();
+            this.btnPost = new System.Windows.Forms.Button();
+            this.Tweets.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // Tweets
             // 
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Location = new System.Drawing.Point(112, 44);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(353, 221);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tweets";
+            this.Tweets.Controls.Add(this.listTweets);
+            this.Tweets.Location = new System.Drawing.Point(12, 12);
+            this.Tweets.Name = "Tweets";
+            this.Tweets.Size = new System.Drawing.Size(353, 221);
+            this.Tweets.TabIndex = 0;
+            this.Tweets.TabStop = false;
+            this.Tweets.Text = "Tweets";
             // 
-            // listBox1
+            // listTweets
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(23, 28);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(308, 173);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listTweets.FormattingEnabled = true;
+            this.listTweets.Location = new System.Drawing.Point(23, 28);
+            this.listTweets.Name = "listTweets";
+            this.listTweets.Size = new System.Drawing.Size(308, 173);
+            this.listTweets.TabIndex = 0;
+            this.listTweets.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // txtTweet
+            // 
+            this.txtTweet.Location = new System.Drawing.Point(13, 274);
+            this.txtTweet.Name = "txtTweet";
+            this.txtTweet.Size = new System.Drawing.Size(352, 20);
+            this.txtTweet.TabIndex = 1;
+            // 
+            // btnPost
+            // 
+            this.btnPost.Location = new System.Drawing.Point(267, 311);
+            this.btnPost.Name = "btnPost";
+            this.btnPost.Size = new System.Drawing.Size(75, 23);
+            this.btnPost.TabIndex = 2;
+            this.btnPost.Text = "Post";
+            this.btnPost.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 367);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(442, 367);
+            this.Controls.Add(this.btnPost);
+            this.Controls.Add(this.txtTweet);
+            this.Controls.Add(this.Tweets);
             this.Name = "Form1";
             this.Text = "Twitter-ish";
-            this.groupBox1.ResumeLayout(false);
+            this.Tweets.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.GroupBox Tweets;
+        private System.Windows.Forms.ListBox listTweets;
+        private System.Windows.Forms.TextBox txtTweet;
+        private System.Windows.Forms.Button btnPost;
     }
 }
 
