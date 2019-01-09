@@ -34,6 +34,17 @@ namespace Twitter_ish_Form
         {
             string msg = tmm.PostTweets(txtTweet.Text);
             lblStatus.Text = msg;
+            refreshTweets();    
+        }
+
+        void refreshTweets()
+        {
+            listTweets.Items.Clear();
+            string[] tweets = tmm.GetTweets();
+            int tweetsCount = tmm.TweetCount();
+
+            for (int i = 0; i < tweetsCount; i++)
+                listTweets.Items.Add(tweets[i]);
         }
     }
 }
