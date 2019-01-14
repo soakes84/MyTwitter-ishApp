@@ -38,6 +38,7 @@
             // 
             // Tweets
             // 
+            this.Tweets.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Tweets.Controls.Add(this.listTweets);
             this.Tweets.Location = new System.Drawing.Point(12, 12);
             this.Tweets.Name = "Tweets";
@@ -85,6 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(389, 367);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnPost);
