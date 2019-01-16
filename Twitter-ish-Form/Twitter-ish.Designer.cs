@@ -86,6 +86,7 @@
             // 
             // Twitter_ish
             // 
+            this.AcceptButton = this.btnPost;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
@@ -94,7 +95,9 @@
             this.Controls.Add(this.btnPost);
             this.Controls.Add(this.txtTweet);
             this.Controls.Add(this.Tweets);
+            this.MaximizeBox = false;
             this.Name = "Twitter_ish";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Twitter-ish";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Tweets.ResumeLayout(false);

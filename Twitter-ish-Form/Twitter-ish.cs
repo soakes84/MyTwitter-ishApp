@@ -30,7 +30,6 @@ namespace Twitter_ish_Form
         private void Form1_Load(object sender, EventArgs e)
         {
             refreshTweets();
-
         }
 
         private void btnPost_Click(object sender, EventArgs e)
