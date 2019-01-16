@@ -38,8 +38,9 @@
             // 
             // Tweets
             // 
-            this.Tweets.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Tweets.BackColor = System.Drawing.Color.LightGray;
             this.Tweets.Controls.Add(this.listTweets);
+            this.Tweets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tweets.Location = new System.Drawing.Point(12, 12);
             this.Tweets.Name = "Tweets";
             this.Tweets.Size = new System.Drawing.Size(353, 221);
@@ -87,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(389, 367);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnPost);
